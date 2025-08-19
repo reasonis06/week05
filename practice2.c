@@ -3,17 +3,16 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
-	int x;
-	int a,b;
+int main(void) {
+	int year;
+	int answer;
 	
-	printf("Input the second: ");
-	scanf("%i", &x);
+	printf("Input the year: ");
+	scanf("%d", &year);
 	
-	a = x/60;
-	b = x%60;
+	answer = ((year%4 == 0) && (year%100 != 0)) || (year%400 == 0); // 나누어 떨어지는가? => 나머지 연산자 % 사용. 
 	
-	printf("The time is %d : %d", a, b);
+	printf("Is the year %d the leap year? %d", year, answer); // True = 1, False = 0
 	
 	return 0;
 }
