@@ -24,3 +24,4 @@ int main(int argc, char *argv[]) {
 	
 	return 0;
 }
+//Dev-C++에서 쓴 한글 주석 github로 업로드하면 깨지는 거 지금 알았다... 내 필기
