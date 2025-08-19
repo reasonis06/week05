@@ -4,18 +4,23 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int x,y,z,m;
-	int a,b,c;
-	x=2;
-	z=1;
-	a=3;
-	b=4;
-	c=5;
+	int x,y;
+	int a,b,c,d,e;
 	
-	y = a*x*x + b*x + c; // C언어에서는 x^2가 제곱이 아니라 XOR 비트 연산자로 읽힘. 오류 발생 주의. 
-	m = (x+y+z)/3;
+	printf("Input two integers: ");
+	scanf("%i %i", &x, &y);
 	
-	printf("y=%d, m=%d", y, m);
+	a = x+y;
+	b = x-y;
+	c = x*y;
+	d = x/y;
+	e = x%y;
+	
+	printf("+ result is %d\n", a);
+	printf("- result is %d\n", b);
+	printf("* result is %d\n", c);
+	printf("/ result is %d\n", d);
+	printf("%% result is %d\n", e); // %를 출력하려면 "%%"라고 입력. 
 	
 	return 0;
 }
