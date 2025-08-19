@@ -3,16 +3,24 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(void) {
-	int year;
-	int answer;
+int main(int argc, char *argv[]) {
+	int x,y;
+	int a,b,c,d,e;
 	
-	printf("Input the year: ");
-	scanf("%d", &year);
+	printf("Input two integers: ");
+	scanf("%i %i", &x, &y);
 	
-	answer = ((year%4 == 0) && (year%100 != 0)) || (year%400 == 0); // 나누어 떨어지는가? => 나머지 연산자 % 사용. 
+	a = x&y; // 양쪽의 비트를 AND로 해석. 0=False 
+	b = x|y; // 양쪽의 비트를 OR로 해석 . 1=True
+	c = x^y; // XOR은 배타적 논리합. 즉 다르면 참(1), 같으면 거짓(0). 
+	d = x<<1; // 왼쪽으로 1비트씩 이동하면 2배. 
+	e = x>>1; // 오른쪽으로 1비트씩 이동하면 1/2배. 
 	
-	printf("Is the year %d the leap year? %d", year, answer); // True = 1, False = 0
+	printf("& result is %d\n", a);
+	printf("| result is %d\n", b);
+	printf("^ result is %d\n", c);
+	printf("<< result is %d\n", d);
+	printf(">> result is %d\n", e); 
 	
 	return 0;
 }
